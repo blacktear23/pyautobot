@@ -23,7 +23,7 @@ It combines below librarys to archive the target:
 * EasyOCR: provide OCR functions.
 '''
 
-version = '1.0.1'
+version = '1.0.2'
 
 setup(
     name='pyautobot',
