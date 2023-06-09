@@ -154,3 +154,15 @@ sudo apt-get install -y python3-opencv python3-tk scrot xclip xsel
 
 * Input text: If some character cannot input by just type keyboard, please use clipboard to copy and paste to input box. For example, you can use `click_and_paste` function.
 * If button image will present more than one at screen, you can use `find_image_element2` to locate bigger image at screen and then find your element image in location image.
+
+## `pyautobot` Command
+
+After install pyautobot it provide a `pyautobot` command line tool. Run `pyautobot` it will start a Python shell with all provided functions imported.
+
+```
+$ pyautobot
+Screen Ratio: 2.0, 2.0
+Elememt Image Ratio: 1, 1
+PyAutoBot Shell
+>>>
+```
