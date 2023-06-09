@@ -102,8 +102,8 @@ sudo apt-get install -y python3-opencv python3-tk scrot xclip xsel
 | tabs(driver) | List | List Chrome tabs info list |
 | get\_new\_tabs(driver, origin\_tabs\_info) | List | Calculate new opened tabs different from `origin_tabs_info` |
 | snap\_page(driver, fname=None) | bool / bytes | Take screen shot from browser page and save to a file when `fname` provided. |
-| find\_element(driver, by, query) | None / Element | Find element by query. If exists just return the first element, if not exists return None. `by` is query type, `query` is query text. |
-| find\_elements(driver, by, query) | [Element] | Find elements by query. `by` is query type, `query` is query text. |
+| find\_element(driver, \*\*kwargs) | None / Element | Find element by query. If exists just return the first element, if not exists return None. `kwargs` key is query type and value is query text. |
+| find\_elements(driver, \*\*kwargs) | [Element] | Find elements by query. `kwargs` key is query type and value is query text. |
 | get\_parent(elem) | Element | Get element's parent element |
 
 > You can use `chrome` function returned driver object to perform more operations. For more details please read Selenium documents.
@@ -129,14 +129,36 @@ sudo apt-get install -y python3-opencv python3-tk scrot xclip xsel
 > 
 > You can use only `deviceName` to tell browser which phone that used, or use rest parameters to define your device settings.
 > 
-> For the query type parameter `by`, it can use Selenium's `By` class or you can just pass a shorten string:
+> For `kwargs`'s query type, it will map key to a Selenium's `By` class value:
 > 
 >  * `id`: By.ID
 >  * `css`: By.CSS_SELECTOR
->  * `class`: By.CLASS_NAME
+>  * `style`: By.CLASS_NAME
 >  * `tag`: By.TAG_NAME
 >  * `name`: By.NAME
 >  * `xpath`: By.XPATH
+> 
+> For example:
+> 
+> ```
+> # Find by ID
+> find_element(d, id='element-id')
+> 
+> # Find by CSS class name
+> find_element(d, style='css-name')
+> 
+> # Find by tag
+> find_element(d, tag='div')
+> 
+> # Find by CSS selector
+> find_element(d, css='div[class="css-name1"]'
+> 
+> # Find by XPATH
+> find_element(d, xpath='parent::*')
+> 
+> # Find by name
+> find_element(d, name='name')
+> ```
 
 ### OCR functions
 | Function | Return | Description |

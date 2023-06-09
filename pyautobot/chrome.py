@@ -184,30 +184,37 @@ def get_parent(elem):
     return elem.find_element(By.XPATH, 'parent::*')
 
 
-def __transform_by(by):
+def __transform_by(kwargs):
+    if len(kwargs) != 1:
+        raise Exception('Invalid query argument, require only one query')
+
+    by, query = list(kwargs.items())[0]
     if by.lower() == 'id':
         by = By.ID
-    elif by.lower() == 'css':
-        by = By.CSS_SELECTOR
     elif by.lower() == 'tag':
         by = By.TAG_NAME
-    elif by.lower() == 'class':
+    elif by.lower() == 'style':
         by = By.CLASS_NAME
+    elif by.lower() == 'css':
+        by = By.CSS_SELECTOR
     elif by.lower() == 'name':
         by = By.NAME
     elif by.lower() == 'xpath':
         by = By.XPATH
-    return by
+    else:
+        raise Exception('Invalid query type: %s' % by)
+
+    return by, query
 
 
-def find_element(driver, by, query):
-    by = __transform_by(by)
+def find_element(driver, **kwargs):
+    by, query = __transform_by(kwargs)
     elems = driver.find_elements(by, query)
     if len(elems) == 0:
         return None
     return elems[0]
 
 
-def find_elements(driver, by, query):
-    by = __transform_by(by)
+def find_elements(driver, **kwargs):
+    by, query = __transform_by(kwargs)
     return driver.find_elements(by, query)
