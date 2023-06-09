@@ -10,6 +10,12 @@ Before install package you should make sure OpenCV and python-tk is installed. T
 python3 setup.py install
 ```
 
+Or install from pip
+
+```
+pip3 install pyautobot
+```
+
 
 ### MacOS
 
