@@ -1,0 +1,14 @@
+#!/usr/bin/env python3
+import code
+from selenium.webdriver.common.by import By
+import pyautobot as bot
+
+
+if __name__ == '__main__':
+    banner = 'PyAutoBot Shell'
+    local_obj = {'By': By}
+    for fname in bot.__all__:
+        fn = getattr(bot, fname)
+        local_obj[fname] = fn
+    bot.init()
+    code.interact(banner=banner, local=local_obj)

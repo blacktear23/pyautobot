@@ -1,0 +1,6 @@
+.DS_Store
+*.png
+*.pyc
+build/*
+dist/*
+pyautobot.egg-info/*
