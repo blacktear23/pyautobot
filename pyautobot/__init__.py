@@ -1,4 +1,4 @@
-from .gui import alert, confirm, prompt, clip, snap, write, hotkey, paste, move, click, dclick, rclick, mdown, mup, scroll, click_and_paste, click_and_type
+from .gui import alert, confirm, prompt, password, clip, snap, write, hotkey, paste, move, click, dclick, rclick, mdown, mup, scroll, click_and_paste, click_and_type
 from .images import init_img, find_image_element, find_image_element2, click_image, click_image2, exists_image, exists_image2, wait_untile_exists, wait_untile_exists2
 from .utils import wait, wait_input, os_name, is_windows, is_linux, is_macos
 from .chrome import start_chrome, switch_to_tab, create_new_tab, list_tabs, scroll_page, snap_page, WINDOWS_UA, LINUX_UA, MACOS_UA, find_element, find_elements, get_parent

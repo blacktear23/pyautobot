@@ -23,7 +23,7 @@ It combines below librarys to archive the target:
 * EasyOCR: provide OCR functions.
 '''
 
-version = '1.0.3'
+version = '1.0.4'
 
 setup(
     name='pyautobot',
@@ -56,5 +56,6 @@ setup(
         'Programming Language :: Python :: 3.9',
         'Programming Language :: Python :: 3.10',
         'Programming Language :: Python :: 3.11',
+        'Programming Language :: Python :: 3.12',
     ],
 )
