@@ -79,6 +79,7 @@ sudo apt-get install -y python3-opencv python3-tk scrot xclip xsel
 | alert(text, title='Alert') | None | Show dialog with `OK` button and text content |
 | confirm(text, title='Confirm') | bool | Show dialog with `OK` and `Cancel` button and text content, Return `True` if `OK` button clicked |
 | prompt(text, title='Please Input', default='') | str | Show dialog for user input some text |
+| password(text, title='Please Input Password', default='') | str | Show dialog for user input password |
 | clip(text) | None | Set clipboard content with text |
 | write(text) | None | Type text |
 | hotkey(*args) | None | Send combine key pressed. For example `Ctrl` + `V` is `hotkey('ctrl', 'v')` |

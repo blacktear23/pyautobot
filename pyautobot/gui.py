@@ -19,6 +19,11 @@ def prompt(text, title='Please Input', default=''):
     return ret
 
 
+def password(text, title='Please Input Password', default=''):
+    ret = pyautogui.password(text, title, default)
+    return ret
+
+
 # clipboard and keyboard control
 def clip(text):
     pyperclip.copy(text)
