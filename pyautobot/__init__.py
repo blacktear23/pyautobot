@@ -68,7 +68,7 @@ __all__ = [
     # Wait and sleep functions
     'wait', 'wait_input', 'shell',
     # Prompt and dialog functions
-    'alert', 'confirm', 'prompt',
+    'alert', 'confirm', 'prompt', 'password',
     # Copy/paste and keyboard input
     'clip', 'write', 'hotkey', 'paste', 'click_and_paste', 'click_and_type',
     # Mouse control functions
