@@ -6,7 +6,6 @@ dependence = [
     'pyautogui',
     'pyperclip',
     'selenium',
-    'easyocr',
     'sympy',
     'lazy_loader',
 ]
@@ -23,7 +22,7 @@ It combines below librarys to archive the target:
 * EasyOCR: provide OCR functions.
 '''
 
-version = '1.0.4'
+version = '1.0.5'
 
 setup(
     name='pyautobot',
